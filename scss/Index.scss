@@ -1,0 +1,147 @@
+@import "_variables";
+
+.jumbotron {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+
+.jumbotron_left {
+    color: white;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(180deg, $lightOrange, $darkOrange);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron_right {
+    width: 50%;
+    height: 100%;
+    background-color: $purple;
+}
+
+.jumbotron_left h2 {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron_left h2 {
+    font-size: 30rem;
+    color: rgba(black, 0.1);
+}
+
+.jumbotron_left h3 {
+    font-size: 4rem;
+    z-index: 0;
+    font-family: "Coolvetica";    
+}
+
+.jumbotron_left p {
+    width: 45%;
+    text-align: center;
+    position: absolute;
+    bottom: 15%;
+    font-size: 1.25rem;
+    line-height: 1.3em;
+    font-family: "Roboto Slab";
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.responsive {
+    background-color: $purple;
+}
+
+.fast {
+    background-color: $lightOrange;
+}
+
+.responsiveSprite {
+    background-image: url("../assets/responsive-sprite-sheet.png");
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 580px;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@for $i from 0 through 55 {
+  .responsiveSprite#{$i} {
+    background-position: (-580) * $i + px;
+  }
+}
+
+.section_text {
+    width: 50%;  
+}
+
+.section_text:nth-child(even) {    
+    margin-left: 100px;      
+}
+
+.section_text:nth-child(odd) {    
+    margin-right: 100px;      
+}
+
+.section_text h2 {
+    font-family: "Coolvetica";
+    font-size: 4rem;
+    border-bottom: 5px solid white;
+    text-shadow: 
+        0 1px 0 darken($color: #ccc, $amount: 25), 
+        0 2px 0 darken($color: #c9c9c9, $amount: 25), 
+        0 3px 0 darken($color: #bbb, $amount: 25), 
+        0 4px 0 darken($color: #b9b9b9, $amount: 25), 
+        0 5px 0 darken($color: #aaa, $amount: 25), 
+        0 6px 1px rgba(0,0,0,.1), 
+        0 0 5px rgba(0,0,0,.1), 
+        0 1px 3px rgba(0,0,0,.3), 
+        0 3px 5px rgba(0,0,0,.2), 
+        0 5px 10px rgba(0,0,0,.25), 
+        0 10px 10px rgba(0,0,0,.2), 
+        0 20px 20px rgba(0,0,0,.15);
+}
+
+.section_text p {
+    font-family: "Roboto Slab";
+    margin-top: 20px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 7px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.stopwatchSprite {
+    background-image: url("../assets/stopwatch-sprite-sheet.png");
+    background-repeat: no-repeat;
+    height: 388px;
+    width: 520px;
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@for $i from 0 through 29 {
+  .stopwatchSprite#{$i} {
+    background-position: (-520) * $i + px;
+  }
+}

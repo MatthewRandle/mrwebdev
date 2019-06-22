@@ -1,0 +1,58 @@
+@import "_variables";
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    z-index: 1;
+}
+
+.navbar_logo {
+    background-color: $purple;
+    height: 100%;
+    width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Slab";
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar_logo--orange {
+    background-color: $lightOrange;
+}
+
+.navbar_right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto Slab";
+}
+
+.navbar_right p {
+    padding-right: 20px;
+    padding-left: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include backgroundTransition($lightOrange, 150ms, "down");
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.navbar_contact {
+    background-color: $lightOrange;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.navbar_contact--purple {
+    background-color: $purple;
+}

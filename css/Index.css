@@ -1,0 +1,522 @@
+.jumbotron {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.jumbotron_left {
+  color: white;
+  width: 50%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#be2940), to(#891637));
+  background: linear-gradient(180deg, #be2940, #891637);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.jumbotron_right {
+  width: 50%;
+  height: 100%;
+  background-color: #4a274a;
+}
+
+.jumbotron_left h2 {
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jumbotron_left h2 {
+  font-size: 30rem;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.jumbotron_left h3 {
+  font-size: 4rem;
+  z-index: 0;
+  font-family: "Coolvetica";
+}
+
+.jumbotron_left p {
+  width: 45%;
+  text-align: center;
+  position: absolute;
+  bottom: 15%;
+  font-size: 1.25rem;
+  line-height: 1.3em;
+  font-family: "Roboto Slab";
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+}
+
+.responsive {
+  background-color: #4a274a;
+}
+
+.fast {
+  background-color: #be2940;
+}
+
+.responsiveSprite {
+  background-image: url("../assets/responsive-sprite-sheet.png");
+  background-repeat: no-repeat;
+  height: 550px;
+  width: 580px;
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.responsiveSprite0 {
+  background-position: 0px;
+}
+
+.responsiveSprite1 {
+  background-position: -580px;
+}
+
+.responsiveSprite2 {
+  background-position: -1160px;
+}
+
+.responsiveSprite3 {
+  background-position: -1740px;
+}
+
+.responsiveSprite4 {
+  background-position: -2320px;
+}
+
+.responsiveSprite5 {
+  background-position: -2900px;
+}
+
+.responsiveSprite6 {
+  background-position: -3480px;
+}
+
+.responsiveSprite7 {
+  background-position: -4060px;
+}
+
+.responsiveSprite8 {
+  background-position: -4640px;
+}
+
+.responsiveSprite9 {
+  background-position: -5220px;
+}
+
+.responsiveSprite10 {
+  background-position: -5800px;
+}
+
+.responsiveSprite11 {
+  background-position: -6380px;
+}
+
+.responsiveSprite12 {
+  background-position: -6960px;
+}
+
+.responsiveSprite13 {
+  background-position: -7540px;
+}
+
+.responsiveSprite14 {
+  background-position: -8120px;
+}
+
+.responsiveSprite15 {
+  background-position: -8700px;
+}
+
+.responsiveSprite16 {
+  background-position: -9280px;
+}
+
+.responsiveSprite17 {
+  background-position: -9860px;
+}
+
+.responsiveSprite18 {
+  background-position: -10440px;
+}
+
+.responsiveSprite19 {
+  background-position: -11020px;
+}
+
+.responsiveSprite20 {
+  background-position: -11600px;
+}
+
+.responsiveSprite21 {
+  background-position: -12180px;
+}
+
+.responsiveSprite22 {
+  background-position: -12760px;
+}
+
+.responsiveSprite23 {
+  background-position: -13340px;
+}
+
+.responsiveSprite24 {
+  background-position: -13920px;
+}
+
+.responsiveSprite25 {
+  background-position: -14500px;
+}
+
+.responsiveSprite26 {
+  background-position: -15080px;
+}
+
+.responsiveSprite27 {
+  background-position: -15660px;
+}
+
+.responsiveSprite28 {
+  background-position: -16240px;
+}
+
+.responsiveSprite29 {
+  background-position: -16820px;
+}
+
+.responsiveSprite30 {
+  background-position: -17400px;
+}
+
+.responsiveSprite31 {
+  background-position: -17980px;
+}
+
+.responsiveSprite32 {
+  background-position: -18560px;
+}
+
+.responsiveSprite33 {
+  background-position: -19140px;
+}
+
+.responsiveSprite34 {
+  background-position: -19720px;
+}
+
+.responsiveSprite35 {
+  background-position: -20300px;
+}
+
+.responsiveSprite36 {
+  background-position: -20880px;
+}
+
+.responsiveSprite37 {
+  background-position: -21460px;
+}
+
+.responsiveSprite38 {
+  background-position: -22040px;
+}
+
+.responsiveSprite39 {
+  background-position: -22620px;
+}
+
+.responsiveSprite40 {
+  background-position: -23200px;
+}
+
+.responsiveSprite41 {
+  background-position: -23780px;
+}
+
+.responsiveSprite42 {
+  background-position: -24360px;
+}
+
+.responsiveSprite43 {
+  background-position: -24940px;
+}
+
+.responsiveSprite44 {
+  background-position: -25520px;
+}
+
+.responsiveSprite45 {
+  background-position: -26100px;
+}
+
+.responsiveSprite46 {
+  background-position: -26680px;
+}
+
+.responsiveSprite47 {
+  background-position: -27260px;
+}
+
+.responsiveSprite48 {
+  background-position: -27840px;
+}
+
+.responsiveSprite49 {
+  background-position: -28420px;
+}
+
+.responsiveSprite50 {
+  background-position: -29000px;
+}
+
+.responsiveSprite51 {
+  background-position: -29580px;
+}
+
+.responsiveSprite52 {
+  background-position: -30160px;
+}
+
+.responsiveSprite53 {
+  background-position: -30740px;
+}
+
+.responsiveSprite54 {
+  background-position: -31320px;
+}
+
+.responsiveSprite55 {
+  background-position: -31900px;
+}
+
+.section_text {
+  width: 50%;
+}
+
+.section_text:nth-child(even) {
+  margin-left: 100px;
+}
+
+.section_text:nth-child(odd) {
+  margin-right: 100px;
+}
+
+.section_text h2 {
+  font-family: "Coolvetica";
+  font-size: 4rem;
+  border-bottom: 5px solid white;
+  text-shadow: 0 1px 0 #8c8c8c, 0 2px 0 #898989, 0 3px 0 #7b7b7b, 0 4px 0 #797979, 0 5px 0 #6a6a6a, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section_text p {
+  font-family: "Roboto Slab";
+  margin-top: 20px;
+}
+
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 7px);
+            transform: translate(0, 7px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 7px);
+            transform: translate(0, 7px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.stopwatchSprite {
+  background-image: url("../assets/stopwatch-sprite-sheet.png");
+  background-repeat: no-repeat;
+  height: 388px;
+  width: 520px;
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+.stopwatchSprite0 {
+  background-position: 0px;
+}
+
+.stopwatchSprite1 {
+  background-position: -520px;
+}
+
+.stopwatchSprite2 {
+  background-position: -1040px;
+}
+
+.stopwatchSprite3 {
+  background-position: -1560px;
+}
+
+.stopwatchSprite4 {
+  background-position: -2080px;
+}
+
+.stopwatchSprite5 {
+  background-position: -2600px;
+}
+
+.stopwatchSprite6 {
+  background-position: -3120px;
+}
+
+.stopwatchSprite7 {
+  background-position: -3640px;
+}
+
+.stopwatchSprite8 {
+  background-position: -4160px;
+}
+
+.stopwatchSprite9 {
+  background-position: -4680px;
+}
+
+.stopwatchSprite10 {
+  background-position: -5200px;
+}
+
+.stopwatchSprite11 {
+  background-position: -5720px;
+}
+
+.stopwatchSprite12 {
+  background-position: -6240px;
+}
+
+.stopwatchSprite13 {
+  background-position: -6760px;
+}
+
+.stopwatchSprite14 {
+  background-position: -7280px;
+}
+
+.stopwatchSprite15 {
+  background-position: -7800px;
+}
+
+.stopwatchSprite16 {
+  background-position: -8320px;
+}
+
+.stopwatchSprite17 {
+  background-position: -8840px;
+}
+
+.stopwatchSprite18 {
+  background-position: -9360px;
+}
+
+.stopwatchSprite19 {
+  background-position: -9880px;
+}
+
+.stopwatchSprite20 {
+  background-position: -10400px;
+}
+
+.stopwatchSprite21 {
+  background-position: -10920px;
+}
+
+.stopwatchSprite22 {
+  background-position: -11440px;
+}
+
+.stopwatchSprite23 {
+  background-position: -11960px;
+}
+
+.stopwatchSprite24 {
+  background-position: -12480px;
+}
+
+.stopwatchSprite25 {
+  background-position: -13000px;
+}
+
+.stopwatchSprite26 {
+  background-position: -13520px;
+}
+
+.stopwatchSprite27 {
+  background-position: -14040px;
+}
+
+.stopwatchSprite28 {
+  background-position: -14560px;
+}
+
+.stopwatchSprite29 {
+  background-position: -15080px;
+}
+/*# sourceMappingURL=Index.css.map */

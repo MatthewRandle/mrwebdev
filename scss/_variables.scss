@@ -1,0 +1,34 @@
+$lightOrange: #be2940;
+$darkOrange: #891637;
+$purple: #4a274a;
+
+@mixin backgroundTransition($backgroundColor, $time, $direction) {
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $backgroundColor;
+        transform: scaleY(0);
+
+        @if $direction == "up" {
+            transform-origin: 0% 100%;
+        }
+        @else if $direction == "down" {
+            transform-origin: 100% 0%;
+        }
+        
+        transition-property: transform;
+        transition: $time ease-out;
+    }
+    
+    &:hover:before {
+        transform: scaleY(1);
+    }   
+}
