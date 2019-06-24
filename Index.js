@@ -13,7 +13,6 @@ new ScrollMagic.Scene({
     triggerElement: ".responsive",
     duration: 2200
 })
-//.setPin(".responsiveSprite")
 .setPin(".responsive")
 .addTo(controller);
 
@@ -33,20 +32,19 @@ let stopwatchSprite = document.getElementsByClassName("stopwatchSprite")[0];
 new ScrollMagic.Scene({
     triggerHook: 0,
     triggerElement: ".fast",
-    duration: 1160
+    duration: 1200
 })
-    //.setPin(".responsiveSprite")
-    .setPin(".fast")
-    .addTo(controller);
+.setPin(".fast")
+.addTo(controller);
 
 // build step frame scene
-for (var i = 1; i <= 29; i++) {
+for (var i = 1; i <= 30; i++) {
     new ScrollMagic.Scene({
         triggerElement: '.fast',
         offset: i * 40
     })
-        .setClassToggle(stopwatchSprite, 'stopwatchSprite' + i)
-        .addTo(controller);
+    .setClassToggle(stopwatchSprite, 'stopwatchSprite' + i)
+    .addTo(controller);
 }
 
 
@@ -56,10 +54,8 @@ let navbarLogo = document.getElementsByClassName("navbar_logo")[0];
 //scroll trigger for navbar logo
 new ScrollMagic.Scene({
     triggerHook: 0,
-    triggerElement: ".responsive",
-    duration: 2200 + window.innerHeight
+    triggerElement: ".responsive"
 })
-//.setPin(".responsiveSprite")
 .setClassToggle(navbarLogo, "navbar_logo--orange")
 .addTo(controller);
 
@@ -68,9 +64,15 @@ let navbarContact = document.getElementsByClassName("navbar_contact")[0];
 //scroll trigger for navbar contact button
 new ScrollMagic.Scene({
     triggerHook: 0,
-    triggerElement: ".fast",
-    duration: window.innerHeight
+    triggerElement: ".fast"
 })
-//.setPin(".responsiveSprite")
 .setClassToggle(navbarContact, "navbar_contact--purple")
+.addTo(controller);
+
+//scroll trigger for navbar logo
+new ScrollMagic.Scene({
+    triggerHook: 0,
+    triggerElement: ".fast"
+})
+.setClassToggle(navbarLogo, "navbar_logo--purple")
 .addTo(controller);

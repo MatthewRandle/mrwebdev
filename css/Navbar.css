@@ -35,6 +35,10 @@
   background-color: #be2940;
 }
 
+.navbar_logo--purple {
+  background-color: #4a274a;
+}
+
 .navbar_right {
   height: 100%;
   display: -webkit-box;
