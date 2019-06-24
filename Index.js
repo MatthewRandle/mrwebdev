@@ -13,7 +13,7 @@ new ScrollMagic.Scene({
     triggerElement: ".responsive",
     duration: 2200
 })
-.setPin(".responsive")
+.setPin(".section_content--responsive")
 .addTo(controller);
 
 // build step frame scene
@@ -34,7 +34,7 @@ new ScrollMagic.Scene({
     triggerElement: ".fast",
     duration: 1200
 })
-.setPin(".fast")
+.setPin(".section_content--fast")
 .addTo(controller);
 
 // build step frame scene
@@ -47,9 +47,31 @@ for (var i = 1; i <= 30; i++) {
     .addTo(controller);
 }
 
+//seo section
+let seoSprite = document.getElementsByClassName("seoSprite")[0];
+new ScrollMagic.Scene({
+    triggerHook: 0,
+    triggerElement: ".seo",
+    duration: 1200
+})
+    .setPin(".section_content--seo")
+    .addTo(controller);
+
+// build step frame scene
+for (var i = 1; i <= 30; i++) {
+    new ScrollMagic.Scene({
+        triggerElement: '.seo',
+        offset: i * 40
+    })
+    .setClassToggle(seoSprite, 'seoSprite' + i)
+    .addTo(controller);
+}
+
 
 
 let navbarLogo = document.getElementsByClassName("navbar_logo")[0];
+let navbarContact = document.getElementsByClassName("navbar_contact")[0];
+let navbarPortfolio = document.getElementsByClassName("navbar_portfolio")[0];
 
 //scroll trigger for navbar logo
 new ScrollMagic.Scene({
@@ -59,7 +81,6 @@ new ScrollMagic.Scene({
 .setClassToggle(navbarLogo, "navbar_logo--orange")
 .addTo(controller);
 
-let navbarContact = document.getElementsByClassName("navbar_contact")[0];
 
 //scroll trigger for navbar contact button
 new ScrollMagic.Scene({
@@ -75,4 +96,12 @@ new ScrollMagic.Scene({
     triggerElement: ".fast"
 })
 .setClassToggle(navbarLogo, "navbar_logo--purple")
+.addTo(controller);
+
+//scroll trigger for navbar logo
+new ScrollMagic.Scene({
+    triggerHook: 0,
+    triggerElement: ".fast"
+})
+.setClassToggle(navbarPortfolio, "navbar_portfolio--purple")
 .addTo(controller);

@@ -50,7 +50,8 @@
   font-family: "Roboto Slab";
 }
 
-.navbar_right p {
+.navbar_portfolio,
+.navbar_contact {
   padding-right: 20px;
   padding-left: 20px;
   height: 100%;
@@ -63,12 +64,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.navbar_portfolio:hover,
+.navbar_contact:hover {
+  cursor: pointer;
+}
+
+.navbar_portfolio {
   position: relative;
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
 }
 
-.navbar_right p:before {
+.navbar_portfolio:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -89,13 +98,41 @@
   transition: 150ms ease-out;
 }
 
-.navbar_right p:hover:before {
+.navbar_portfolio:hover:before {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
 
-.navbar_right p:hover {
-  cursor: pointer;
+.navbar_portfolio--purple {
+  position: relative;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.navbar_portfolio--purple:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4a274a;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+}
+
+.navbar_portfolio--purple:hover:before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .navbar_contact {

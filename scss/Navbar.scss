@@ -37,18 +37,26 @@
     font-family: "Roboto Slab";
 }
 
-.navbar_right p {
+.navbar_portfolio,
+.navbar_contact {
     padding-right: 20px;
     padding-left: 20px;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    @include backgroundTransition($lightOrange, 150ms, "down");
+    align-items: center;    
 
     &:hover {
         cursor: pointer;
     }
+}
+
+.navbar_portfolio {
+    @include backgroundTransition($lightOrange, 150ms, "down");
+}
+
+.navbar_portfolio--purple {
+    @include backgroundTransition($purple, 150ms, "down");
 }
 
 .navbar_contact {

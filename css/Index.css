@@ -84,27 +84,42 @@ section {
   color: white;
 }
 
+.section_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
 .responsive {
   background-color: #4a274a;
+  height: calc(100vh + 2200px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .fast {
   background-color: #be2940;
+  height: calc(100vh + 1200px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
-.responsiveSprite {
-  background-image: url("../assets/responsive-sprite-sheet.png");
-  background-repeat: no-repeat;
-  height: 550px;
-  width: 580px;
-  -webkit-animation-name: floating;
-          animation-name: floating;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+.seo {
+  background-color: #4a274a;
+  height: calc(100vh + 1200px);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .responsiveSprite0 {
@@ -331,73 +346,128 @@ section {
   background-position: -31900px;
 }
 
-.section_text {
-  width: 50%;
+.seoSprite0 {
+  background-position: 0px;
 }
 
-.section_text:nth-child(even) {
-  margin-left: 100px;
+.seoSprite1 {
+  background-position: -600px;
 }
 
-.section_text:nth-child(odd) {
-  margin-right: 100px;
+.seoSprite2 {
+  background-position: -1200px;
 }
 
-.section_text h2 {
-  font-family: "Coolvetica";
-  font-size: 4rem;
-  border-bottom: 5px solid white;
-  text-shadow: 0 1px 0 #8c8c8c, 0 2px 0 #898989, 0 3px 0 #7b7b7b, 0 4px 0 #797979, 0 5px 0 #6a6a6a, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+.seoSprite3 {
+  background-position: -1800px;
 }
 
-.section_text p {
-  font-family: "Roboto Slab";
-  margin-top: 20px;
+.seoSprite4 {
+  background-position: -2400px;
 }
 
-@-webkit-keyframes floating {
-  from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 7px);
-            transform: translate(0, 7px);
-  }
-  to {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
-  }
+.seoSprite5 {
+  background-position: -3000px;
 }
 
-@keyframes floating {
-  from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
-  }
-  65% {
-    -webkit-transform: translate(0, 7px);
-            transform: translate(0, 7px);
-  }
-  to {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
-  }
+.seoSprite6 {
+  background-position: -3600px;
 }
 
-.stopwatchSprite {
-  background-image: url("../assets/stopwatch-sprite-sheet.png");
-  background-repeat: no-repeat;
-  height: 388px;
-  width: 520px;
-  -webkit-animation-name: floating;
-          animation-name: floating;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+.seoSprite7 {
+  background-position: -4200px;
+}
+
+.seoSprite8 {
+  background-position: -4800px;
+}
+
+.seoSprite9 {
+  background-position: -5400px;
+}
+
+.seoSprite10 {
+  background-position: -6000px;
+}
+
+.seoSprite11 {
+  background-position: -6600px;
+}
+
+.seoSprite12 {
+  background-position: -7200px;
+}
+
+.seoSprite13 {
+  background-position: -7800px;
+}
+
+.seoSprite14 {
+  background-position: -8400px;
+}
+
+.seoSprite15 {
+  background-position: -9000px;
+}
+
+.seoSprite16 {
+  background-position: -9600px;
+}
+
+.seoSprite17 {
+  background-position: -10200px;
+}
+
+.seoSprite18 {
+  background-position: -10800px;
+}
+
+.seoSprite19 {
+  background-position: -11400px;
+}
+
+.seoSprite20 {
+  background-position: -12000px;
+}
+
+.seoSprite21 {
+  background-position: -12600px;
+}
+
+.seoSprite22 {
+  background-position: -13200px;
+}
+
+.seoSprite23 {
+  background-position: -13800px;
+}
+
+.seoSprite24 {
+  background-position: -14400px;
+}
+
+.seoSprite25 {
+  background-position: -15000px;
+}
+
+.seoSprite26 {
+  background-position: -15600px;
+}
+
+.seoSprite27 {
+  background-position: -16200px;
+}
+
+.seoSprite28 {
+  background-position: -16800px;
+}
+
+.seoSprite29 {
+  background-position: -17400px;
+}
+
+.seoSprite30 {
+  background-position: -18000px;
 }
 
 .stopwatchSprite0 {
@@ -522,5 +592,92 @@ section {
 
 .stopwatchSprite30 {
   background-position: -15600px;
+}
+
+.section_text {
+  width: 50%;
+}
+
+.section_text:nth-child(even) {
+  margin-left: 100px;
+}
+
+.section_text:nth-child(odd) {
+  margin-right: 100px;
+}
+
+.section_text h2 {
+  font-family: "Coolvetica";
+  font-size: 4rem;
+  border-bottom: 5px solid white;
+  text-shadow: 0 1px 0 #8c8c8c, 0 2px 0 #898989, 0 3px 0 #7b7b7b, 0 4px 0 #797979, 0 5px 0 #6a6a6a, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section_text p {
+  font-family: "Roboto Slab";
+  margin-top: 20px;
+}
+
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 7px);
+            transform: translate(0, 7px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 7px);
+            transform: translate(0, 7px);
+  }
+  to {
+    -webkit-transform: translate(0, 0px);
+            transform: translate(0, 0px);
+  }
+}
+
+.responsiveSprite,
+.stopwatchSprite,
+.seoSprite {
+  -webkit-animation-name: floating;
+          animation-name: floating;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  background-repeat: no-repeat;
+}
+
+.responsiveSprite {
+  background-image: url("../assets/responsive-sprite-sheet.png");
+  height: 550px;
+  width: 580px;
+}
+
+.stopwatchSprite {
+  background-image: url("../assets/stopwatch-sprite-sheet.png");
+  height: 388px;
+  width: 520px;
+}
+
+.seoSprite {
+  background-image: url("../assets/seo-sprite-sheet.png");
+  height: 450px;
+  width: 600px;
+  z-index: 3;
 }
 /*# sourceMappingURL=Index.css.map */
