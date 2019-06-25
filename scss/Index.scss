@@ -118,7 +118,8 @@ section {
     margin-right: 100px;      
 }
 
-.section_text h2 {
+.section_text h2,
+.contact h2 {
     font-family: "Coolvetica";
     font-size: 4rem;
     border-bottom: 5px solid white;
@@ -175,4 +176,73 @@ section {
     height: 450px;
     width: 600px;    
     z-index: 3;
+}
+
+.contact {
+    background: linear-gradient(to bottom, $lightOrange, $darkOrange);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact h2 {
+    border-bottom: 0;
+}
+
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    width: 800px;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder {
+    color: white;
+}
+
+.contact form input,
+.contact form textarea {
+    margin: 5px;
+    padding: 5px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 4px solid white;
+    background-color: rgba($color: black, $alpha: 0.1);
+    color: white;
+    font-family: "Roboto Slab";
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.contact form input[name="name"],
+.contact form input[name="email"] {
+    flex: 1;
+}
+
+.contact form textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact form button {
+    flex: 1;
+    margin: 5px;
+    height: 50px;
+    font-size: 1.3rem;
+    font-family: "Coolvetica";
+    color: white;
+    border: none;
+    border-top: 4px solid white;
+    background-color: rgba($color: black, $alpha: 0.1);
+    @include backgroundTransition(white, 150ms, "down");
+    transition: color 0.15s ease-in;
+
+    &:hover {
+        cursor: pointer;
+        color: #1e1e1e;
+    }
 }
