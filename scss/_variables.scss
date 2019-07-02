@@ -1,6 +1,7 @@
 $lightOrange: #be2940;
 $darkOrange: #891637;
-$purple: #4a274a;
+$blue: #354C6F;
+$darkGrey: #222222;
 
 @mixin backgroundTransition($backgroundColor, $time, $direction) {
     position: relative;
@@ -30,5 +31,11 @@ $purple: #4a274a;
     
     &:hover:before {
         transform: scaleY(1);
-    }   
+    }
 }
+
+@mixin desktop-down() {@media only screen and (max-width: 1200px) { @content; }}
+
+@mixin tablet-down() {@media only screen and (max-width: 768px) { @content; }}
+
+@mixin phone-down() {@media only screen and (max-width: 480px) { @content; }}

@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100%;
     display: flex;
+    padding-top: 55px;
 }
 
 .jumbotron_left {
@@ -20,7 +21,31 @@
 .jumbotron_right {
     width: 50%;
     height: 100%;
-    background-color: $purple;
+    background-color: $darkGrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron_right img {
+    width: 80%;
+    z-index: 1;
+
+    @include desktop-down() {
+        width: 85%;
+    }
+}
+
+.jumbotron_right span {
+    width: 250px;
+    height: 50%;
+    bottom: 0;
+    background-color: $blue;
+    position: absolute;
+
+    @include desktop-down() {
+        width: 200px;
+    }
 }
 
 .jumbotron_left h2 {
@@ -30,17 +55,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.jumbotron_left h2 {
     font-size: 30rem;
     color: rgba(black, 0.1);
+
+    @include desktop-down() {
+        font-size: 25rem;
+    }
 }
 
 .jumbotron_left h3 {
     font-size: 4rem;
     z-index: 0;
     font-family: "Coolvetica";    
+
+    @include desktop-down() {
+        font-size: 3rem;
+    }
 }
 
 .jumbotron_left p {
@@ -51,6 +81,11 @@
     font-size: 1.25rem;
     line-height: 1.3em;
     font-family: "Roboto Slab";
+
+    @include desktop-down() {
+        font-size: 1rem;
+        width: 48%;
+    }
 }
 
 section {
@@ -60,6 +95,11 @@ section {
     align-items: center;
     justify-content: center;
     color: white;
+    overflow: hidden;
+
+    @include desktop-down() {
+        //padding-top: 55px;
+    }
 }
 
 .section_content {
@@ -68,10 +108,14 @@ section {
     align-items: center;
     height: 100vh;
     width: 100%;
+
+    @include desktop-down() {
+        flex-direction: column;
+    }
 }
 
 .responsive {
-    background-color: $purple;
+    background-color: $blue;
     height: calc(100vh + 2200px);
     align-items: flex-start;
 }
@@ -83,15 +127,9 @@ section {
 }
 
 .seo {
-    background-color: $purple;
+    background-color: $blue;
     height: calc(100vh + 1200px);
     align-items: flex-start;
-}
-
-@for $i from 0 through 55 {
-  .responsiveSprite#{$i} {
-    background-position: (-580) * $i + px;
-  }
 }
 
 @for $i from 0 through 30 {
@@ -108,20 +146,43 @@ section {
 
 .section_text {
     width: 50%;  
+
+    @include desktop-down() {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.section_text h2 {
+    font-size: 4rem;
+
+    @include desktop-down() {
+        font-size: 3rem;
+    }
 }
 
 .section_text:nth-child(even) {    
     margin-left: 100px;      
+
+    @include desktop-down() {
+        margin-left: 0;
+    }
 }
 
 .section_text:nth-child(odd) {    
-    margin-right: 100px;      
+    margin-right: 100px; 
+
+    @include desktop-down() {
+        margin-left: 0;
+    }     
 }
 
 .section_text h2,
-.contact h2 {
+.contact h2,
+.jumbotron h3 {
     font-family: "Coolvetica";
-    font-size: 4rem;
     border-bottom: 5px solid white;
     text-shadow: 
         0 1px 0 darken($color: #ccc, $amount: 25), 
@@ -138,9 +199,19 @@ section {
         0 20px 20px rgba(0,0,0,.15);
 }
 
+.jumbotron h3 {
+    border-bottom: none;
+}
+
 .section_text p {
     font-family: "Roboto Slab";
     margin-top: 20px;
+    line-height: 1.3em;
+
+    @include desktop-down() {
+        text-align: center;
+        margin-top: 10px;
+    }
 }
 
 @keyframes floating {
@@ -163,6 +234,22 @@ section {
     background-image: url("../assets/responsive-sprite-sheet.png");    
     height: 550px;
     width: 580px;
+
+    @include desktop-down() {
+        width: 450px; 
+        height: 426px; //450 / (580/550)
+        background-size: 5600%; //width of sprite sheet / amount of sprites
+    }
+}
+
+@for $i from 0 through 55 {
+  .responsiveSprite#{$i} {
+    background-position: (-580) * $i + px;
+
+    @include desktop-down() {
+        background-position: (-450) * $i + px;
+    }
+  }
 }
 
 .stopwatchSprite {
@@ -175,7 +262,6 @@ section {
     background-image: url("../assets/seo-sprite-sheet.png");
     height: 450px;
     width: 600px;    
-    z-index: 3;
 }
 
 .contact {
@@ -184,10 +270,12 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: calc(100vh - 200px);
 }
 
 .contact h2 {
     border-bottom: 0;
+    font-size: 4rem;
 }
 
 .contact form {
@@ -208,13 +296,14 @@ section {
     padding: 5px;
     font-size: 1rem;
     border: none;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid $darkGrey;
     background-color: rgba($color: black, $alpha: 0.1);
     color: white;
     font-family: "Roboto Slab";
 
     &:focus {
         outline: none;
+        border-bottom: 4px solid white;
     }
 }
 
@@ -232,17 +321,16 @@ section {
     flex: 1;
     margin: 5px;
     height: 50px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: "Coolvetica";
     color: white;
     border: none;
-    border-top: 4px solid white;
-    background-color: rgba($color: black, $alpha: 0.1);
+    background-color: $darkGrey;
     @include backgroundTransition(white, 150ms, "down");
     transition: color 0.15s ease-in;
 
     &:hover {
         cursor: pointer;
-        color: #1e1e1e;
+        color: $darkGrey;
     }
 }

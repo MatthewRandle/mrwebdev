@@ -67,41 +67,17 @@ for (var i = 1; i <= 30; i++) {
     .addTo(controller);
 }
 
-
-
-let navbarLogo = document.getElementsByClassName("navbar_logo")[0];
 let navbarContact = document.getElementsByClassName("navbar_contact")[0];
-let navbarPortfolio = document.getElementsByClassName("navbar_portfolio")[0];
-
-//scroll trigger for navbar logo
-new ScrollMagic.Scene({
-    triggerHook: 0,
-    triggerElement: ".responsive"
-})
-.setClassToggle(navbarLogo, "navbar_logo--orange")
-.addTo(controller);
-
 
 //scroll trigger for navbar contact button
 new ScrollMagic.Scene({
     triggerHook: 0,
-    triggerElement: ".fast"
+    triggerElement: ".contact"
 })
-.setClassToggle(navbarContact, "navbar_contact--purple")
+.setClassToggle(navbarContact, "navbar_contact--transparent")
 .addTo(controller);
 
-//scroll trigger for navbar logo
-new ScrollMagic.Scene({
-    triggerHook: 0,
-    triggerElement: ".fast"
-})
-.setClassToggle(navbarLogo, "navbar_logo--purple")
-.addTo(controller);
-
-//scroll trigger for navbar logo
-new ScrollMagic.Scene({
-    triggerHook: 0,
-    triggerElement: ".fast"
-})
-.setClassToggle(navbarPortfolio, "navbar_portfolio--purple")
-.addTo(controller);
+function scrollToContact() {
+    let contact = document.getElementsByClassName("contact")[0];
+    contact.scrollIntoView();
+}
