@@ -7,60 +7,94 @@
     padding-top: 55px;
 }
 
-.jumbotron_left {
-    color: white;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(180deg, $lightOrange, $darkOrange);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .jumbotron_right {
     width: 50%;
     height: 100%;
-    background-color: $darkGrey;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .jumbotron_right img {
-    width: 80%;
     z-index: 1;
-
-    @include desktop-down() {
-        width: 85%;
-    }
+    width: 400px;
 }
 
-.jumbotron_right span {
-    width: 250px;
-    height: 50%;
-    bottom: 0;
-    background-color: $blue;
+.jumbotron_right .circle {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
     position: absolute;
+    overflow: hidden;
+}
 
-    @include desktop-down() {
-        width: 200px;
-    }
+.jumbotron_right .circle_section {
+    width: 100%;
+    height: 33.33%;
+}
+
+.jumbotron_right .green {
+    background-color: $green;
+}
+
+.jumbotron_right .orange {
+    background-color: $orange;
+}
+
+.jumbotron_right .purple {
+    background-color: $purple;
+}
+
+.jumbotron_left {
+    color: $darkGrey;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .jumbotron_left h2 {
     position: absolute;
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 30rem;
-    color: rgba(black, 0.1);
+    right: 25%;
+    top: 15%;
+    
 
     @include desktop-down() {
         font-size: 25rem;
     }
+}
+
+.ampersand_container {
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+//top
+.jumbotron_left .ampersand_top::before {
+    content: attr(data-char);
+    position: absolute;
+    height: 33.33%;
+    overflow: hidden;
+    color: $green;
+    z-index: 1;
+}
+//middle
+.jumbotron_left .ampersand::before {
+    content: attr(data-char);
+    position: absolute;
+    height: 66.66%;
+    overflow: hidden;
+    color: $orange;
+}
+//bottom
+.jumbotron_left .ampersand {
+    color: $purple;
 }
 
 .jumbotron_left h3 {
@@ -74,10 +108,9 @@
 }
 
 .jumbotron_left p {
-    width: 45%;
+    width: 85%;
+    transform: translateY(200px);
     text-align: center;
-    position: absolute;
-    bottom: 15%;
     font-size: 1.25rem;
     line-height: 1.3em;
     font-family: "Roboto Slab";
@@ -86,191 +119,6 @@
         font-size: 1rem;
         width: 48%;
     }
-}
-
-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
-
-    @include desktop-down() {
-        //padding-top: 55px;
-    }
-}
-
-.section_content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-
-    @include desktop-down() {
-        flex-direction: column;
-    }
-}
-
-.responsive {
-    background-color: $blue;
-    height: calc(100vh + 2200px);
-    align-items: flex-start;
-}
-
-.fast {
-    background-color: $lightOrange;
-    height: calc(100vh + 1200px);
-    align-items: flex-start;
-}
-
-.seo {
-    background-color: $blue;
-    height: calc(100vh + 1200px);
-    align-items: flex-start;
-}
-
-@for $i from 0 through 30 {
-  .seoSprite#{$i} {
-    background-position: (-600) * $i + px;
-  }
-}
-
-@for $i from 0 through 30 {
-  .stopwatchSprite#{$i} {
-    background-position: (-520) * $i + px;
-  }
-}
-
-.section_text {
-    width: 50%;  
-
-    @include desktop-down() {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
-.section_text h2 {
-    font-size: 4rem;
-
-    @include desktop-down() {
-        font-size: 3rem;
-    }
-}
-
-.section_text:nth-child(even) {    
-    margin-left: 100px;      
-
-    @include desktop-down() {
-        margin-left: 0;
-    }
-}
-
-.section_text:nth-child(odd) {    
-    margin-right: 100px; 
-
-    @include desktop-down() {
-        margin-left: 0;
-    }     
-}
-
-.section_text h2,
-.contact h2,
-.jumbotron h3 {
-    font-family: "Coolvetica";
-    border-bottom: 5px solid white;
-    text-shadow: 
-        0 1px 0 darken($color: #ccc, $amount: 25), 
-        0 2px 0 darken($color: #c9c9c9, $amount: 25), 
-        0 3px 0 darken($color: #bbb, $amount: 25), 
-        0 4px 0 darken($color: #b9b9b9, $amount: 25), 
-        0 5px 0 darken($color: #aaa, $amount: 25), 
-        0 6px 1px rgba(0,0,0,.1), 
-        0 0 5px rgba(0,0,0,.1), 
-        0 1px 3px rgba(0,0,0,.3), 
-        0 3px 5px rgba(0,0,0,.2), 
-        0 5px 10px rgba(0,0,0,.25), 
-        0 10px 10px rgba(0,0,0,.2), 
-        0 20px 20px rgba(0,0,0,.15);
-}
-
-.jumbotron h3 {
-    border-bottom: none;
-}
-
-.section_text p {
-    font-family: "Roboto Slab";
-    margin-top: 20px;
-    line-height: 1.3em;
-
-    @include desktop-down() {
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-@keyframes floating {
-    from { transform: translate(0,  0px); }
-    65%  { transform: translate(0, 7px); }
-    to   { transform: translate(0, -0px); }    
-}
-
-.responsiveSprite,
-.stopwatchSprite,
-.seoSprite {
-    animation-name: floating;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    background-repeat: no-repeat;
-}
-
-.responsiveSprite {
-    background-image: url("../assets/responsive-sprite-sheet.png");    
-    height: 550px;
-    width: 580px;
-
-    @include desktop-down() {
-        width: 450px; 
-        height: 426px; //450 / (580/550)
-        background-size: 5600%; //width of sprite sheet / amount of sprites
-    }
-}
-
-@for $i from 0 through 55 {
-  .responsiveSprite#{$i} {
-    background-position: (-580) * $i + px;
-
-    @include desktop-down() {
-        background-position: (-450) * $i + px;
-    }
-  }
-}
-
-.stopwatchSprite {
-    background-image: url("../assets/stopwatch-sprite-sheet.png");
-    height: 388px;
-    width: 520px;    
-}
-
-.seoSprite {
-    background-image: url("../assets/seo-sprite-sheet.png");
-    height: 450px;
-    width: 600px;    
-}
-
-.contact {
-    background: linear-gradient(to bottom, $lightOrange, $darkOrange);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 200px);
 }
 
 .contact h2 {
@@ -296,7 +144,7 @@ section {
     padding: 5px;
     font-size: 1rem;
     border: none;
-    border-bottom: 4px solid $darkGrey;
+    border-bottom: 4px solid $orange;
     background-color: rgba($color: black, $alpha: 0.1);
     color: white;
     font-family: "Roboto Slab";
@@ -325,12 +173,11 @@ section {
     font-family: "Coolvetica";
     color: white;
     border: none;
-    background-color: $darkGrey;
-    @include backgroundTransition(white, 150ms, "down");
+    background-color: $orange;
     transition: color 0.15s ease-in;
 
     &:hover {
         cursor: pointer;
-        color: $darkGrey;
+        color: $orange;
     }
 }

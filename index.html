@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="./css/Index.css" />
         <link rel="stylesheet" type="text/css" href="./css/Navbar.css" />
         <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
 
         <title>MR Web Design & Development</title>
         <meta name="description" content="Web design and development, from basic static sites to single page applications" />
@@ -23,7 +23,10 @@
 
         <div class="jumbotron">
             <div class="jumbotron_left">
-                <h2>&</h2>
+                <div class="ampersand_container">
+                    <h2 class="ampersand_top" data-char="&">&</h2>
+                    <h2 class="ampersand" data-char="&">&</h2>
+                </div>
                 <h3>web design</h3>
                 <h3>development</h3>
                 <p>
@@ -33,58 +36,14 @@
             </div>
         
             <div class="jumbotron_right">
-                <img src="./assets/jumbotron-illustration-circle.svg" alt="Me at computer desk">
-                <span></span>
+                <img src="./assets/jumbotron-illustration.svg" alt="Me at computer desk">
+                <div class="circle">
+                    <div class="circle_section green"></div>
+                    <div class="circle_section orange"></div>
+                    <div class="circle_section purple"></div>
+                </div>
             </div>
         </div>
-        
-        <section class="responsive">
-            <div class="section_content section_content--responsive">
-                <div class="responsiveSprite"></div>
-        
-                <div class="section_text">
-                    <h2>Responsive Design</h2>
-                    <p>
-                        Every website I build is designed to adapt to every screen size - From desktop to mobile, ensuring every
-                        user gets the
-                        perfect experience no matter the device.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="fast">
-            <div class="section_content section_content--fast">
-                <div class="section_text">
-                    <h2>Super Fast Load Times</h2>
-                    <p>
-                        Google says "53% of users will abandon a site if it takes longer than 3 seconds to load". Every website
-                        I build will be optimized and developed
-                        with this in mind - Allowing you to retain users that land on your site and provide a truly lightning
-                        fast experience.
-                    </p>
-                </div>
-                <div class="stopwatchSprite"></div>
-            </div>
-        </section>
-        
-        <section class="seo">
-            <div class="section_content section_content--seo">
-                <div class="seoSprite"></div>
-                <div class="section_text">
-                    <h2>Exceptional SEO</h2>
-                    <p>
-                        Search Engine Optimization (SEO) is the process of increasing the quality and quantity of website
-                        traffic by increasing visibility of a website.
-                        The more your site is optimized for search engines such as Google, the more users you will get on your
-                        website.
-        
-                        I always ensure that every site I build is search engine optimized to the highest standard possible - no
-                        matter the client.
-                    </p>
-                </div>
-            </div>
-        </section>
         
         <section class="contact">
             <h2>Get in touch</h2>
@@ -95,15 +54,13 @@
                 <button type="submit">
                     <p>SEND MESSAGE</p>
                 </button>
-            </form>
-        </section>
+            </form>            
+        </section>        
 
         <footer>
-
+        
         </footer>
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
         <script src="Index.js"></script>
     </body>
 </html>
