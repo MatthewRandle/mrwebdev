@@ -1,6 +1,45 @@
 footer {
   width: 100%;
   height: 200px;
-  background-color: #2f2f2f;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+  footer {
+    height: 150px;
+  }
+}
+
+.footer_logo {
+  font-family: "Coolvetica";
+  cursor: pointer;
+  font-size: 4rem;
+  border-bottom: 8px solid;
+  -o-border-image: linear-gradient(to right, #00a266 0%, #00a266 33.32%, #ee4540 33.33%, #ee4540 66.65%, #9864fb 66.66%, #9864fb 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#00a266), color-stop(33.32%, #00a266), color-stop(33.33%, #ee4540), color-stop(66.65%, #ee4540), color-stop(66.66%, #9864fb), to(#9864fb));
+     border-image: linear-gradient(to right, #00a266 0%, #00a266 33.32%, #ee4540 33.33%, #ee4540 66.65%, #9864fb 66.66%, #9864fb 100%);
+  border-image-slice: 1;
+  height: 85px;
+  color: #1b1b1b;
+}
+
+.footer_logo:hover {
+  -o-border-image: linear-gradient(to right, #1b1b1b);
+     border-image: -webkit-gradient(linear, left top, right top, from(#1b1b1b));
+     border-image: linear-gradient(to right, #1b1b1b);
+  border-image-slice: 1;
+}
+
+@media only screen and (max-width: 480px) {
+  .footer_logo {
+    height: 55px;
+    font-size: 3rem;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

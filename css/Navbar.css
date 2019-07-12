@@ -11,10 +11,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #2f2f2f;
+  color: #1b1b1b;
   z-index: 2;
   padding-left: 15px;
   padding-right: 15px;
+  background-color: white;
+  padding-bottom: 5px;
 }
 
 .navbar_logo {
@@ -29,12 +31,19 @@
           align-items: center;
   font-family: "Coolvetica";
   cursor: pointer;
-  border-bottom: 4px solid #ee4540;
   font-size: 1.5rem;
+  border-bottom: 4px solid;
+  -o-border-image: linear-gradient(to right, #00a266 0%, #00a266 33.32%, #ee4540 33.33%, #ee4540 66.65%, #9864fb 66.66%, #9864fb 100%);
+     border-image: -webkit-gradient(linear, left top, right top, from(#00a266), color-stop(33.32%, #00a266), color-stop(33.33%, #ee4540), color-stop(66.65%, #ee4540), color-stop(66.66%, #9864fb), to(#9864fb));
+     border-image: linear-gradient(to right, #00a266 0%, #00a266 33.32%, #ee4540 33.33%, #ee4540 66.65%, #9864fb 66.66%, #9864fb 100%);
+  border-image-slice: 1;
 }
 
 .navbar_logo:hover {
-  border-color: #00a266;
+  -o-border-image: linear-gradient(to right, #1b1b1b);
+     border-image: -webkit-gradient(linear, left top, right top, from(#1b1b1b));
+     border-image: linear-gradient(to right, #1b1b1b);
+  border-image-slice: 1;
 }
 
 .navbar_right {
@@ -71,10 +80,36 @@
 }
 
 .navbar_contact {
-  background-color: #9864fb;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-  font-weight: bold;
+  background-color: #1b1b1b;
+  position: relative;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.navbar_contact:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ee4540;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition: 150ms ease-out;
+  transition: 150ms ease-out;
+}
+
+.navbar_contact:hover:before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .navbar_contact--transparent {

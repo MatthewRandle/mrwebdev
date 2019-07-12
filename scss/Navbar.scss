@@ -11,20 +11,24 @@
     z-index: 2;
     padding-left: 15px;
     padding-right: 15px;
+    background-color: white;
+    padding-bottom: 5px;
 }
 
 .navbar_logo {
-    //height: 27px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Coolvetica";
     cursor: pointer;
-    border-bottom: 4px solid $orange;
     font-size: 1.5rem;
+    border-bottom: 4px solid;
+	border-image: linear-gradient(to right, $green 0%, $green 33.32%, $orange 33.33%, $orange 66.65%, $purple 66.66%, $purple 100%);
+	border-image-slice: 1;
 
     &:hover {
-        border-color: $green;
+        border-image: linear-gradient(to right, $darkGrey);
+        border-image-slice: 1;
     }
 }
 
@@ -51,9 +55,8 @@
 }
 
 .navbar_contact {
-    background-color: $purple;
-    transition: background-color 0.3s;
-    font-weight: bold;
+    background-color: $darkGrey;
+    @include backgroundTransition($orange, 150ms, "down");
 }
 
 .navbar_contact--transparent {

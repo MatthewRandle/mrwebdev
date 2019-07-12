@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="./css/Navbar.css" />
         <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
         <title>MR Web Design & Development</title>
         <meta name="description" content="Web design and development, from basic static sites to single page applications" />
@@ -14,29 +15,26 @@
 
     <body>
         <div class="navbar">
-                <h2 class="navbar_logo">MR</h2>
+                <h2 class="navbar_logo" onclick="scrollToTop()">MR</h2>
                 <div class="navbar_right">
                     <!-- <p class="navbar_portfolio">Portfolio</p> -->
                     <p class="navbar_contact" onclick="scrollToContact()">Contact Me</p>
                 </div>
         </div>
 
-        <div class="jumbotron">
-            <div class="jumbotron_left">
-                <div class="ampersand_container">
-                    <h2 class="ampersand_top" data-char="&">&</h2>
-                    <h2 class="ampersand" data-char="&">&</h2>
-                </div>
-                <h3>web design</h3>
-                <h3>development</h3>
+        <div class="hero">
+            <div class="hero_left">
+                <img src="./assets/ampersand.svg" alt="Ampersand">
+                <h3>web designer</h3>
+                <h3>developer</h3>
                 <p>
                     I work as a freelancer designing &
                     developing professional, modern and beautiful websites at an affordable price.
                 </p>
             </div>
         
-            <div class="jumbotron_right">
-                <img src="./assets/jumbotron-illustration.svg" alt="Me at computer desk">
+            <div class="hero_right">
+                <img src="./assets/hero-illustration.svg" alt="Me at computer desk">
                 <div class="circle">
                     <div class="circle_section green"></div>
                     <div class="circle_section orange"></div>
@@ -44,10 +42,75 @@
                 </div>
             </div>
         </div>
+
+        <section class="benefits">
+            <h2 data-aos="fade-right" data-aos-duration="750">What I can do for you</h2>
+            <div class="benefits_top_panel" data-aos="fade-right" data-aos-duration="1000">
+                <img  class="responsive" src="./assets/Responsive.svg" alt="Monitor, Tablet and Mobile phone showcasing different screen sizes">
+                <h3>Responsive Design</h3>
+                <p>Every website I build is designed to adapt to every screen size - From desktop to mobile, ensuring every user gets
+                    the perfect experience no matter the device.</p>
+            </div>
+            <div class="benefits_bottom">
+                <div class="benefits_bottom_panel" data-aos="fade-right" data-aos-duration="1000">
+                    <img class="fast" src="./assets/Responsive.svg" alt="Monitor, Tablet and Mobile phone showcasing different screen sizes">
+                    <h3>Super Fast Load Times</h3>
+                    <p>
+                        Google says "53% of users will abandon a site if it takes longer than 3 seconds to load". Every website
+                        I build will be optimized and developed with this in mind - Allowing you to retain users that land on your site and provide a truly lightning
+                        fast experience.
+                    </p>
+                </div>
+
+                <div class="benefits_bottom_panel" data-aos="fade-right" data-aos-duration="1000">
+                    <img class="seo" src="./assets/Responsive.svg" alt="Monitor, Tablet and Mobile phone showcasing different screen sizes">
+                    <h3>SEO Optimized</h3>
+                    <p>
+                        The better your site is optimized for search engines such as Google, the more users you will get on your
+                        website. Every site I build will has exceptional SEO which is backed up by a SEO report on the final product.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="whyChooseMe">
+            <h2 data-aos="fade-up" data-aos-duration="750">Why Choose Me?</h2>
+            <ul>
+                <li data-aos="fade-up" data-aos-duration="750">
+                    <div class="whyChooseMe_image_container"><img src="./assets/paintbrush.svg" alt="Paintbrush"></div>
+                    <p>Your website will be designed fully custom from the ground up with your business in mind. Wether a sleek and minimal 
+                        design suits your needs or a colorful, playful design.</p>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="750">
+                    <div class="whyChooseMe_image_container"><img src="./assets/money.svg" alt="Money"></div>
+                    <p>
+                        My website design and development prices are extremely affordable with no hidden charges. Since every 
+                        website is different every price is different - get in <span onclick="scrollToContact()">contact</span> with me to discuss.
+                    </p>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="750">
+                    <div class="whyChooseMe_image_container"><img src="./assets/passion.svg" alt="Heart"></div>
+                    <p>
+                        I’ve been creating things for years and fell in love with web
+                        design and development. Every website I create I give my full
+                        attention and passion, ensuring you get a quality product.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="portfolio_container">
+            <h2 data-aos="fade-up" data-aos-duration="750">My Previous Work</h2>
+            <div class="portfolio" data-aos="fade-up" data-aos-duration="1000">
+                <img src="./assets/exportknowledge.png" alt="A Clients website">
+                <img src="./assets/marleypaulsmith.png" alt="A Clients website">
+                <img src="./assets/stripe.png" alt="A Clients website">
+            </div>
+        </section>
         
         <section class="contact">
-            <h2>Get in touch</h2>
-            <form action="">
+            <h2 data-aos="fade-up" data-aos-duration="750">Get in touch</h2>
+            <form action="" data-aos="fade-up" data-aos-duration="750">
                 <input type="text" name="name" id="name" placeholder="Name">
                 <input type="email" name="email" id="email" placeholder="Email">
                 <textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message"></textarea>
@@ -55,12 +118,18 @@
                     <p>SEND MESSAGE</p>
                 </button>
             </form>            
-        </section>        
+        </section>
 
         <footer>
-        
+            <h2 class="footer_logo" onclick="scrollToTop()">MR</h2>
         </footer>
 
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                once: true
+            });
+        </script>
         <script src="Index.js"></script>
     </body>
 </html>

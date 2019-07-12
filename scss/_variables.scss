@@ -1,10 +1,80 @@
 $green: #00a266;
 $orange: #ee4540;
 $purple: #9864fb;
-$darkGrey: #2f2f2f;
+$darkGrey: #1b1b1b;
+$shadowColor: #cccbfb;
+$textShadow: 2px 2px 0px rgba($darkGrey, 0.2);;
+
+@mixin backgroundTransition($backgroundColor, $time, $direction) {
+    position: relative;
+    transform: translateZ(0);
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $backgroundColor;
+        transform: scaleY(0);
+
+        @if $direction == "up" {
+            transform-origin: 0% 100%;
+        }
+        @else if $direction == "down" {
+            transform-origin: 100% 0%;
+        }
+        
+        transition-property: transform;
+        transition: $time ease-out;
+    }
+    
+    &:hover:before {
+        transform: scaleY(1);
+    }
+}
 
 @mixin desktop-down() {@media only screen and (max-width: 1200px) { @content; }}
 
 @mixin tablet-down() {@media only screen and (max-width: 768px) { @content; }}
 
 @mixin phone-down() {@media only screen and (max-width: 480px) { @content; }}
+
+$LIGHTING_FLOOR: 1;
+$LIGHTING_CEIL: 2;
+$LIGHTING_FLAT: 3;
+
+@mixin text3d($primary, $depth: 5, $shadowsteps: 5, $shadowincrementer: 3px, $shadowopacity: .5, $primaryshadowcolour: #000, $lighting: $LIGHTING_CEIL) {
+  $predefinedShadows: (
+    0 0 5px rgba($primaryshadowcolour, .05), 
+    0 -1px 3px rgba($primaryshadowcolour, .2), 
+    0 3px 5px rgba($primaryshadowcolour, .2));
+  $value: ();
+  @for $i from 1 through $depth {
+    $num: $i + px;
+    $hueadjust: $i;
+    @if($lighting == $LIGHTING_FLOOR) {
+      $hueadjust: ($i * 2 - $depth - 5) * 1%;
+    } @elseif($lighting == $LIGHTING_CEIL) {
+      $hueadjust: -($i*2 + $depth - 10) * 1%;
+    } @elseif($lighting == $LIGHTING_FLAT) {
+      $hueadjust: -$depth * 1%;
+    }
+    $colour: adjust-color($primary, $lightness: $hueadjust);
+    $theShadow: 0 $num 0 $colour;
+    $value: append($value, $theShadow, comma);
+  }
+  
+  @for $i from 1 through $shadowsteps {
+    @if($i >= length($predefinedShadows)) {
+      $dist: $i * $shadowincrementer;
+      $value: append($value, 0 $dist $dist rgba($primaryshadowcolour, $shadowopacity));
+    } @else {
+      $value: append($value, nth($predefinedShadows, $i));
+    }
+  }
+  
+  text-shadow: $value;
+}

@@ -1,8 +1,7 @@
 @font-face {
-  font-family: 'Coolvetica';
-  src: url("./assets/coolvetica_rg-webfont.woff2") format("woff2"), url("./assets/coolvetica_rg-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Harabara Bold";
+  src: url("css/fonts/coolvetica_rg-webfont.eot");
+  src: url("css/fonts/coolvetica_rg-webfont.woff") format("woff"), url("css/fonts/coolvetica_rg-webfont.otf") format("opentype"), url("css/fonts/coolvetica_rg-webfont.svg") format("svg");
 }
 
 .pushFooter {
@@ -64,10 +63,6 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
-}
-
-.disableScroll {
-  overflow: hidden;
 }
 
 html {
