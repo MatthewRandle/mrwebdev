@@ -2,17 +2,21 @@
 
 .navbar {
     width: 100%;
-    padding-top: 15px;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: $darkGrey;
+    background-color: white;
     z-index: 2;
+    padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
-    background-color: white;
     padding-bottom: 5px;
+}
+
+.navbar a {
+    color: $darkGrey;
 }
 
 .navbar_logo {

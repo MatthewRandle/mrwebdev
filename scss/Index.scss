@@ -1,5 +1,11 @@
 @import "_variables";
 
+/* .hide {
+    @include tablet-down() {
+        display: none;
+    }
+} */
+
 .hero {
     height: 100vh;
     width: 100%;
@@ -48,7 +54,6 @@
     border-radius: 50%;
     position: absolute;
     overflow: hidden;
-    transform: rotateZ(180deg);
 
     @include desktop-down() {
         width: 45vw;
@@ -177,7 +182,7 @@
 
     @include desktop-down() {
         font-size: 1rem;
-        width: 100%;
+        width: 95%;
     }
 
     @include tablet-down() {
@@ -191,6 +196,76 @@
     }
 }
 
+.chevron_container {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 36px;
+    height: 36px;
+
+    @include tablet-down() {
+        display: none;
+    }
+}
+
+.chevron {
+    width: 100%;
+    height: 10px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+    position: absolute;
+}
+
+.chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: $darkGrey;
+}
+
+.chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+    25% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    67% {
+        opacity: 1;
+        transform: translateY(45px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(60px) scale3d(0.5, 0.5, 0.5);
+    }
+}
+
 .benefits,
 .whyChooseMe {
     width: 100%;
@@ -198,6 +273,11 @@
     flex-direction: column;
     align-items: center;
     font-family: "Roboto Slab";
+}
+
+.benefits p,
+.whyChooseMe p {
+    line-height: 1.3em;
 }
 
 .benefits {
@@ -235,7 +315,7 @@
     margin-top: 50px;
 
     @include desktop-down() {
-        width: 90%;
+        width: 98%;
         justify-content: space-between;
     }
 
@@ -243,6 +323,11 @@
         flex-direction: column;
         align-items: center;
         margin-top: 0;
+        width: 95%;
+    }
+
+    @include phone-down() {
+        width: 100%;
     }
 }
 
@@ -251,8 +336,16 @@
     flex-direction: column; 
     align-items: center;
 
+    @include desktop-down() {
+        width: 70%;
+    }
+
     @include tablet-down() {
         width: 95%;
+    }
+
+    @include phone-down() {
+        width: 100%;
     }
 }
 
@@ -262,7 +355,7 @@
     align-items: center;
 
     @include desktop-down() {
-        width: 50%;
+        width: 45%;
     }
 
     @include tablet-down() {
@@ -274,19 +367,28 @@
 .benefits img {
     width: 300px;
     height: auto;
+    margin-bottom: 20px;
     transform: translateX(40px);
 
     @include desktop-down() {
         width: 200px;
+    }  
+    
+    @include tablet-down() {
+        width: 250px;
+    }
+
+    @include phone-down() {
+        transform: translateX(20px);
     }
 }
 
 .benefits .fast {
-    transform: translateX(50px);
+
 }
 
 .benefits .seo {
-    transform: translateX(30px);
+    
 }
 
 .benefits h3 {
@@ -296,21 +398,26 @@
     font-family: "Coolvetica";
 
     @include desktop-down() {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 }
 
 .benefits p {
     width: 550px;
-    margin-top: 10px;
-    line-height: 1.3em;
+    margin-top: 5px;
     text-align: center;
-    font-size: 0.85rem;
     font-family: "Zilla Slab";
 
     @include desktop-down() {
         width: 100%;
-        font-size: 0.8rem;
+    }
+
+    @include tablet-down() {
+        width: 90%;
+    }
+
+    @include phone-down() {
+        width: 95%;
     }
 }
 
@@ -320,12 +427,15 @@
     }
 
     @include tablet-down() {
+        width: 90%;
+    }
+
+    @include phone-down() {
         width: 100%;
     }
 }
 
-.whyChooseMe,
-.portfolio_container {
+.whyChooseMe {
     margin-top: 200px;
 
     @include desktop-down() {
@@ -337,85 +447,65 @@
     }
 
     @include phone-down() {
-        margin-top: 100px;
+        margin-top: 125px;
     }
 }
 
 .whyChooseMe ul {
-    width: 50%;
+    width: 1000px;
 
     @include desktop-down() {
-        width: 70%;
+        width: 80%;
     }
 
     @include tablet-down() {
         width: 90%;
     }
+
+    @include phone-down() {
+        width: 95%;
+    }
 }
 
 .whyChooseMe ul li {
-    box-shadow: 0 4px 8px rgba(154,160,185,.05), 0 12px 32px rgba(166,173,201,.2);
-    height: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
     margin-bottom: 50px;
-
-    @include desktop-down() {
-        height: 185px;
-        padding: 20px;
-    }
-
-    @include tablet-down() {
-        height: 150px;
-        padding: 10px;
-    }
 
     @include phone-down() {
         flex-direction: column;
-        justify-content: center;
-        height: auto;
     }
 }
 
-.whyChooseMe ul li p {
-    flex: 1;
-    font-size: 0.9rem;
-    line-height: 1.3em;
-    
-    @include tablet-down() {
-        padding-left: 10px;
-    }
+.whyChooseMe ul li:nth-child(even) {
+    flex-direction: row-reverse;
 
     @include phone-down() {
-        flex: 0;
-        padding-left: 0;
-        margin-top: 10px;
-        text-align: center;
+        flex-direction: column;
     }
-}
-
-.whyChooseMe span {
-    color: $orange;
-    cursor: pointer;
 }
 
 .whyChooseMe_image_container {
     display: flex;
     justify-content: center;
-    width: 25%;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(154,160,185,.05), 0 12px 32px rgba(166,173,201,.2);
 
-    @include tablet-down() {
-        width: 20%;
+    @include desktop-down() {
+        width: 200px;
+        height: 200px;
     }
 
-    @include phone-down() {
-        width: auto;
+    @include tablet-down() {
+        width: 125px;
+        height: 125px;
     }
 }
 
-.whyChooseMe img {
+.whyChooseMe_image_container img {
     width: 70%;
 
     @include tablet-down() {
@@ -427,16 +517,51 @@
     }
 }
 
+.whyChooseMe ul li p {
+    flex: 1;
+    padding: 30px;
+    
+    @include tablet-down() {
+        padding: 20px;
+    }
+
+    @include phone-down() {
+        flex: 0;
+        padding: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+.whyChooseMe span {
+    color: $orange;
+    cursor: pointer;
+}
+
 .portfolio_container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 75px;
+    margin-top: 140px;
+
+    @include desktop-down() {
+        margin-top: 115px;
+    }
+
+    @include tablet-down() {
+        margin-top: 100px;
+    }
+
+    @include phone-down() {
+        margin-top: 75px;
+    }
 }
 
 .portfolio {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 4px 8px rgba(154,160,185,.05), 0 12px 32px rgba(166,173,201,.2);
 }
 
@@ -459,11 +584,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 150px - 61px);
 
     @include desktop-down() {
         padding-left: 30px;
         padding-right: 30px;
+    }
+
+    @include tablet-down() {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     @include phone-down() {
@@ -492,6 +622,10 @@
     width: 800px;
 
     @include desktop-down() {
+        width: 700px;
+    }
+
+    @include tablet-down() {
         width: 100%;
     }
 
@@ -500,17 +634,44 @@
     }
 }
 
-.contact form input::placeholder,
-.contact form textarea::placeholder {
-    color: $darkGrey;
-    opacity: 0.5;
+.form_group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+
+    @include phone-down() {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.form_group label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #999;
+    background-color: white;
+    z-index: 10;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    font-family: "Zilla Slab";
+
+    @include phone-down() {
+        bottom: 5px;
+    }
+}
+
+.focused label {
+    transform: translateY(-125%);
+    font-size: 1rem;
+}
+
+.form_group input .filled {
+    box-shadow: 0 2px 0 0 lightgreen;
 }
 
 .contact form input,
 .contact form textarea {
-    margin: 5px;
-    padding: 5px;
-    padding-left: 0;
     font-size: 1rem;
     border: none;
     color: $darkGrey;
@@ -527,14 +688,26 @@
     flex: 1;
 }
 
+.contact form input[name="name"] {
+    margin-right: 10px;
+
+    @include phone-down() {
+        margin-right: 0;
+    }
+}
+
 .contact form textarea {
     width: 100%;
     resize: none;
 }
 
+.contact form label:last-of-type {
+    color: #999;
+    margin-top: 10px;
+}
+
 .contact form button {
-    flex: 1;
-    margin: 5px;
+    width: 100%;
     height: 50px;
     font-size: 1.2rem;
     font-family: "Coolvetica";
@@ -545,6 +718,7 @@
     overflow: hidden;
     transition: all 0.2s;
     background-color: $green;
+    margin-top: 10px;
 
     @include phone-down() {
         height: 40px;
@@ -590,4 +764,20 @@
 
 .contact form button:hover:after{
     transition-delay: .25s;
+}
+
+.form_consent {
+    font-size: 0.7rem;
+    margin-top: 10px;
+    font-family: "Roboto Slab";
+    display: flex;
+    align-items: center;
+}
+
+.form_consent p {
+    color: $darkGrey;    
+}
+
+.form_consent a {
+    color: $orange;
 }
