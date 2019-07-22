@@ -11,6 +11,8 @@ footer {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 15px;
+  padding-top: 10px;
+  position: absolute;
 }
 
 @media only screen and (max-width: 480px) {

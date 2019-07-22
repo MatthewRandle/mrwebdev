@@ -1,10 +1,8 @@
 @import "_variables";
 
-/* .hide {
-    @include tablet-down() {
-        display: none;
-    }
-} */
+body {
+    position: relative;
+}
 
 .hero {
     height: 100vh;
@@ -282,6 +280,7 @@
 
 .benefits {
     margin-top: 100px;
+    overflow: hidden;
 }
 
 .benefits h2,
@@ -367,8 +366,7 @@
 .benefits img {
     width: 300px;
     height: auto;
-    margin-bottom: 20px;
-    transform: translateX(40px);
+    margin-bottom: 20px;    
 
     @include desktop-down() {
         width: 200px;
@@ -376,7 +374,11 @@
     
     @include tablet-down() {
         width: 250px;
-    }
+    }    
+}
+
+.benefits .responsive {
+    transform: translateX(40px);
 
     @include phone-down() {
         transform: translateX(20px);
@@ -384,11 +386,23 @@
 }
 
 .benefits .fast {
+    transform: translateX(65px);
 
+    @include desktop-down() {
+        transform: translateX(40px);
+    }
+
+    @include tablet-down() {
+        transform: translateX(50px);
+    }
 }
 
 .benefits .seo {
-    
+    transform: translateX(20px);
+
+    @include phone-down() {
+        transform: translateX(20px);
+    }
 }
 
 .benefits h3 {
@@ -584,7 +598,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 150px - 61px);
+    height: calc(100vh - 150px);
 
     @include desktop-down() {
         padding-left: 30px;
@@ -600,7 +614,7 @@
         padding-left: 10px;
         padding-right: 10px;
         margin-top: 20px;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 120px);
     }
 }
 
@@ -611,7 +625,7 @@
     @include text3d($shadowColor, 4, 5, 1px, 0.2, rgb(0, 0, 0));
 
     @include phone-down() {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -630,7 +644,7 @@
     }
 
     @include phone-down() {
-        margin-top: 20px;
+        width: 90%;
     }
 }
 
@@ -651,8 +665,7 @@
     left: 0;
     bottom: 10px;
     color: #999;
-    background-color: white;
-    z-index: 10;
+    z-index: 1;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
     font-family: "Zilla Slab";
 
@@ -699,6 +712,10 @@
 .contact form textarea {
     width: 100%;
     resize: none;
+
+    @include phone-down() {
+        height: 50px;
+    }
 }
 
 .contact form label:last-of-type {
@@ -775,7 +792,8 @@
 }
 
 .form_consent p {
-    color: $darkGrey;    
+    color: $darkGrey;  
+    line-height: 1.3em;  
 }
 
 .form_consent a {

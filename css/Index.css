@@ -1,8 +1,7 @@
-/* .hide {
-    @include tablet-down() {
-        display: none;
-    }
-} */
+body {
+  position: relative;
+}
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -394,6 +393,7 @@
 
 .benefits {
   margin-top: 100px;
+  overflow: hidden;
 }
 
 .benefits h2,
@@ -532,8 +532,6 @@
   width: 300px;
   height: auto;
   margin-bottom: 20px;
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -548,8 +546,44 @@
   }
 }
 
+.benefits .responsive {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
 @media only screen and (max-width: 480px) {
-  .benefits img {
+  .benefits .responsive {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+}
+
+.benefits .fast {
+  -webkit-transform: translateX(65px);
+          transform: translateX(65px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .benefits .fast {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .benefits .fast {
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+}
+
+.benefits .seo {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+}
+
+@media only screen and (max-width: 480px) {
+  .benefits .seo {
     -webkit-transform: translateX(20px);
             transform: translateX(20px);
   }
@@ -841,7 +875,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: calc(100vh - 150px - 61px);
+  height: calc(100vh - 150px);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -863,7 +897,7 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 20px;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 120px);
   }
 }
 
@@ -876,7 +910,7 @@
 
 @media only screen and (max-width: 480px) {
   .contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -904,7 +938,7 @@
 
 @media only screen and (max-width: 480px) {
   .contact form {
-    margin-top: 20px;
+    width: 90%;
   }
 }
 
@@ -932,8 +966,7 @@
   left: 0;
   bottom: 10px;
   color: #999;
-  background-color: white;
-  z-index: 10;
+  z-index: 1;
   -webkit-transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
   transition: font-size 150ms ease-out, -webkit-transform 150ms ease-out;
   transition: transform 150ms ease-out, font-size 150ms ease-out;
@@ -992,6 +1025,12 @@
 .contact form textarea {
   width: 100%;
   resize: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .contact form textarea {
+    height: 50px;
+  }
 }
 
 .contact form label:last-of-type {
@@ -1082,6 +1121,7 @@
 
 .form_consent p {
   color: #1b1b1b;
+  line-height: 1.3em;
 }
 
 .form_consent a {

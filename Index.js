@@ -39,7 +39,7 @@ textArea.addEventListener("focus", () => {
     addHide();
 })
 
-textArea.addEventListener("blur", () => {
+textArea.addEventListener("focusout", () => {
     removeHide();
 })
 
