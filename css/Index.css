@@ -771,6 +771,10 @@ body {
   }
 }
 
+.whyChooseMe_heart {
+  width: 50% !important;
+}
+
 .whyChooseMe ul li p {
   -webkit-box-flex: 1;
       -ms-flex: 1;
