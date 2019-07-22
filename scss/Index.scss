@@ -170,7 +170,7 @@ body {
 }
 
 .hero_left p {
-    width: 85%;
+    width: 70%;
     position: absolute;
     bottom: 100px;
     text-align: center;
@@ -184,7 +184,7 @@ body {
     }
 
     @include tablet-down() {
-        width: 95%;
+        width: 80%;
         bottom: 25px; 
         font-size: 1.1rem;
     }
