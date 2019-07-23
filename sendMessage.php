@@ -19,6 +19,9 @@
                     echo "not sent";
                 }
             }
+            else {
+                echo "No submit";
+            }
         ?>
     </body>
 </html>
