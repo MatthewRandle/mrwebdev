@@ -158,6 +158,23 @@
                 once: true
             });
         </script>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+
+        <script>
+        Email.send({
+                Host: "localhost",
+                Username: "mrwebdev",
+                Password: "MyS6SB2pDNZfyGU",
+                To: 'randle.matthew@hotmail.co.uk',
+                From: "randle.matthew@hotmail.co.uk",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        </script>
+
         <script src="Index.js"></script>
     </body>
 </html>
