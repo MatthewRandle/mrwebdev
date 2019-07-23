@@ -4,7 +4,7 @@
     $message = $_POST["message"];
     $subject = "New message from $name, $email";
     $to="contact@misterweb.dev";
-    $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8";
+    $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: enquiry@misterweb.dev";
 ?>
 
 <!DOCTYPE html>
