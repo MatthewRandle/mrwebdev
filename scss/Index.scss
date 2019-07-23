@@ -134,6 +134,7 @@ body {
 
     @include phone-down() {
         font-size: 14vw;
+        @include text3d($shadowColor, 3, 5, 3px, 0, rgb(0, 0, 0));
     }
 }
 
@@ -304,6 +305,7 @@ body {
 
     @include phone-down() {
         font-size: 2rem;
+        @include text3d($shadowColor, 2, 5, 1px, 0.1, rgb(0, 0, 0));
     }
 }
 

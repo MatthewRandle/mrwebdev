@@ -182,6 +182,7 @@ body {
 @media only screen and (max-width: 480px) {
   .hero_left h3 {
     font-size: 14vw;
+    text-shadow: 0 1px 0 #e3e3fd, 0 2px 0 #dad9fc, 0 3px 0 #d1d0fb, 0 0 5px rgba(0, 0, 0, 0.05), 0 -1px 3px rgba(0, 0, 0, 0.2), 0 9px 9px rgba(0, 0, 0, 0), 0 12px 12px rgba(0, 0, 0, 0), 0 15px 15px rgba(0, 0, 0, 0);
   }
 }
 
@@ -429,6 +430,7 @@ body {
   .whyChooseMe h2,
   .portfolio_container h2 {
     font-size: 2rem;
+    text-shadow: 0 1px 0 #e8e7fd, 0 2px 0 #dfdefc, 0 0 5px rgba(0, 0, 0, 0.05), 0 -1px 3px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
   }
 }
 
