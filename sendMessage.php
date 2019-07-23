@@ -3,7 +3,7 @@
     $email = $_POST["email"];
     $message = $_POST["message"];
     $subject = "New message from $name, $email";
-    $to="enquiry@misterweb.dev";
+    $to="contact@misterweb.dev";
     $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8";
 ?>
 
