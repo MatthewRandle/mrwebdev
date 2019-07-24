@@ -3,9 +3,9 @@
     $dotenv = Dotenv\Dotenv::create("/var/www");
     $dotenv->load();
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+    $name = $_POST["name"] ?? "No Name";
+    $email = $_POST["email"] ?? "No Email";
+    $message = $_POST["message"] ?? "No Message";
     $subject = "New message from $name, $email";
     $to="contact@misterweb.dev";
     $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: enquiry@misterweb.dev";
@@ -20,7 +20,7 @@
 
     try {
         $response = $sendgrid->send($mail);
-        echo $response;
+        print_r($response);
         if($response == 202) {
             header("Location: https://misterweb.dev");
         }
