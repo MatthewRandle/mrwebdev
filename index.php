@@ -12,25 +12,26 @@
         <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="canonical" href="https://misterweb.dev" />
 
         <title>MR Web Design & Development</title>
-        <meta name="description" content="Web design and development, from basic static sites to single page applications" />
+        <meta name="description" content="Web design and development, from basic static sites to single page applications, each beautiful, modern and fully custom built" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
     </head>
 
     <body>
         <div class="navbar">
-                <h2 class="navbar_logo" onclick="scrollToTop()">MR</h2>
-                <div class="navbar_right">
-                    <p class="navbar_contact" onclick="scrollToContact()">Contact Me</p>
-                </div>
+            <h2 class="navbar_logo" onclick="scrollToTop()">MR</h2>
+            <div class="navbar_right">
+                <p class="navbar_contact" onclick="scrollToContact()">Contact Me</p>
+            </div>
         </div>
 
         <div class="hero">
             <div class="hero_left">
                 <img src="./assets/ampersand.svg" alt="Ampersand">
-                <h3>web design</h3>
-                <h3>development</h3>
+                <h3>Web Design</h3>
+                <h3>Development</h3>
                 <p>Creating professional, modern and beautiful websites at an affordable price.</p>
             </div>
         
@@ -51,7 +52,7 @@
         </div>
 
         <section class="benefits">
-            <h2 data-aos="fade-right" data-aos-duration="750">What I can do for you</h2>
+            <h1 data-aos="fade-right" data-aos-duration="750">What I can do for you</h1>
             <div class="benefits_top_panel" data-aos="fade-right" data-aos-duration="1000">
                 <img class="responsive" src="./assets/Responsive.svg" alt="Monitor, Tablet and Mobile phone showcasing different screen sizes">
                 <h3>Responsive Design</h3>
@@ -158,8 +159,8 @@
             <div class="footer_left">
                 <h2 class="footer_logo" onclick="scrollToTop()">MR</h2>
                 <div class="footer_links">
-                    <a href="./terms-and-conditions.html">Terms & Conditions</a>
-                    <a href="./privacy-policy.html">Privacy Policy</a>
+                    <a href="./terms-and-conditions">Terms & Conditions</a>
+                    <a href="./privacy-policy">Privacy Policy</a>
                 </div>
             </div>
 

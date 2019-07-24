@@ -397,7 +397,7 @@ body {
   overflow: hidden;
 }
 
-.benefits h2,
+.benefits h1,
 .whyChooseMe h2,
 .portfolio_container h2 {
   font-size: 2.5rem;
@@ -409,7 +409,7 @@ body {
 }
 
 @media only screen and (max-width: 1200px) {
-  .benefits h2,
+  .benefits h1,
   .whyChooseMe h2,
   .portfolio_container h2 {
     margin-bottom: 50px;
@@ -417,7 +417,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .benefits h2,
+  .benefits h1,
   .whyChooseMe h2,
   .portfolio_container h2 {
     font-size: 2.25rem;
@@ -426,7 +426,7 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
-  .benefits h2,
+  .benefits h1,
   .whyChooseMe h2,
   .portfolio_container h2 {
     font-size: 2rem;

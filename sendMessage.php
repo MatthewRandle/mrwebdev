@@ -30,18 +30,18 @@
                 $response = $sendgrid->send($mail);
                 print_r($response);
                 if($response->statusCode() == 202) {
-                    header("Location: index.php");
+                    header("Location: /");
                     die();
                 }
                 else {
                     $_SESSION["contactError"] = true;
-                    header("Location: index.php#form");
+                    header("Location: /#form");
                     die();
                 }
             }
             catch(Exception $e) {
                 $_SESSION["contactError"] = true;
-                header("Location: index.php#form");
+                header("Location: /#form");
                 die();
             }
         ?>
