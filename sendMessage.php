@@ -21,7 +21,7 @@
     try {
         $response = $sendgrid->send($mail);
         print_r($response);
-        if($response == 202) {
+        if($response->statusCode() == 202) {
             header("Location: https://misterweb.dev");
         }
     }
