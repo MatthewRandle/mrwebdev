@@ -1,4 +1,7 @@
 <?php
+    ini_set("session.save_path", "/var/www/html/sessionData");
+    session_start();
+
     require("vendor/autoload.php");
     $dotenv = Dotenv\Dotenv::create("/var/www");
     $dotenv->load();
@@ -22,10 +25,18 @@
         $response = $sendgrid->send($mail);
         print_r($response);
         if($response->statusCode() == 202) {
-            header("Location: https://misterweb.dev");
+            header("Location: index.php");
+            die();
+        }
+        else {
+            $_SESSION["contactError"] = true;
+            header("Location: index.php");
+            die();
         }
     }
     catch(Exception $e) {
-        echo $e->getMessage();
+        $_SESSION["contactError"] = true;
+        header("Location: index.php");
+        die();
     }
 ?>

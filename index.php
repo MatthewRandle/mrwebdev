@@ -1,3 +1,8 @@
+<?php
+    ini_set("session.save_path", "/var/www/html/sessionData");
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -112,7 +117,7 @@
         
         <section id="contact" class="contact">
             <h2 data-aos="fade-up" data-aos-duration="750">Get in touch</h2>
-            <form action="sendMessage.php" method="POST" data-aos="fade-up" data-aos-duration="750" id="form">
+            <form action="sendMessage.php" method="get" data-aos="fade-up" data-aos-duration="750" id="form">
                 <div class="form_group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required>
@@ -137,6 +142,13 @@
                 <button type="submit" name="submit">
                     <p>SEND MESSAGE</p>
                 </button>
+
+                <?php
+                    if(isset($_SESSION["contactError"])) {
+                        echo "<p>There was a problem sending the email.</p>";
+                        unset($_SESSION['contactError']);
+                    }
+                ?>
             </form>            
         </section>
 
