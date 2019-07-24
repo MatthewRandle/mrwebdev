@@ -1,5 +1,7 @@
 <?php
     require("vendor/autoload.php");
+    $dotenv = Dotenv\Dotenv::create("/var/www");
+    $dotenv->load();
 
     $name = $_POST["name"];
     $email = $_POST["email"];
@@ -14,12 +16,13 @@
     $mail->addTo("randle.matthew@hotmail.co.uk");
     $mail->addContent("text/plain", $message);
 
-    $sendgrid = new \SendGrid(getenv(SENDGRID_KEY));
+    $sendgrid = new \SendGrid(getenv("SENDGRID_KEY"));
 
     try {
         $response = $sendgrid->send($mail);
+        echo $response;
         if($response != 202) {
-            
+
         }
     }
     catch(Exception $e) {
