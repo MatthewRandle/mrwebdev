@@ -146,7 +146,7 @@
                 <?php
                     if(isset($_SESSION["contactError"])) {
                         if($_SESSION["contactError"] == true) {
-                            echo "<p class="contact_error">There was a problem sending the email, please try again. If the problem persists you can email directly to <span>contact@misterweb.dev</span>. Sorry for the inconvenience.</p>";
+                            echo "<p class='contact_error'>There was a problem sending the email, please try again. If the problem persists you can email directly to <span>contact@misterweb.dev</span>. Sorry for the inconvenience.</p>";
                             unset($_SESSION['contactError']);
                         }
                     }
