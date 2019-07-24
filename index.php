@@ -145,8 +145,10 @@
 
                 <?php
                     if(isset($_SESSION["contactError"])) {
-                        echo "<p>There was a problem sending the email.</p>";
-                        unset($_SESSION['contactError']);
+                        if($_SESSION["contactError"] == true) {
+                            echo "<p>There was a problem sending the email.</p>";
+                            unset($_SESSION['contactError']);
+                        }
                     }
                 ?>
             </form>            
