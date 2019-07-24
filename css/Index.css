@@ -1075,37 +1075,44 @@ body {
   z-index: 1;
 }
 
-/* .contact form button:before,
+.contact form button:before,
 .contact form button:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100%;    
-    z-index: -1;
-    transition: all 0.2s;
-    width: 200%;
-    background: $purple;
-    transform-origin: 0 bottom;
-    transform: translate3D(0, -100%, 0);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  width: 200%;
+  background: #9864fb;
+  -webkit-transform-origin: 0 bottom;
+          transform-origin: 0 bottom;
+  -webkit-transform: translate3D(0, -100%, 0);
+          transform: translate3D(0, -100%, 0);
+  z-index: 0;
 }
 
-.contact form button:before{
-    background-color: $orange;
+.contact form button:before {
+  background-color: #ee4540;
 }
 
 .contact form button:hover::before,
 .contact form button:hover:after {
-    transform: rotate(0deg);
-    transition: all .25s;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
-.contact form button:hover:after{
-    transition-delay: .25s;
-} */
+.contact form button:hover:after {
+  -webkit-transition-delay: .25s;
+          transition-delay: .25s;
+}
+
 .form_consent {
   font-size: 0.7rem;
   margin-top: 10px;

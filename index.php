@@ -140,7 +140,7 @@
                 </div>
 
                 <button type="submit" name="submit">
-                    <!-- <p>SEND MESSAGE</p> -->
+                    <p>SEND MESSAGE</p>
                 </button>
 
                 <?php
