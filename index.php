@@ -117,7 +117,7 @@
         
         <section id="contact" class="contact">
             <h2 data-aos="fade-up" data-aos-duration="750">Get in touch</h2>
-            <form action="sendMessage.php" method="get" data-aos="fade-up" data-aos-duration="750" id="form">
+            <form action="sendMessage.php" method="get" data-aos="fade-up" data-aos-duration="750" id="form" name="form">
                 <div class="form_group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required>
@@ -171,8 +171,6 @@
             AOS.init({
                 once: true
             });
-        </script>
-        <script src="https://smtpjs.com/v3/smtp.js">
         </script>
         <script src="Index.js"></script>
     </body>
