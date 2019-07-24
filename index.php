@@ -135,8 +135,8 @@
                 <div class="form_consent">
                     <input type="checkbox" name="checkbox" style="margin-right: 10px;" required>
                     <p>
-                        You allow the storage of your Name/Email and agree to our <a href="./privacy-policy.html">Privacy Policy</a>
-                        and <a href="./terms-and-conditions.html">Terms & Conditions</a>
+                        You allow the storage of your Name/Email and agree to our <a href="./privacy-policy">Privacy Policy</a>
+                        and <a href="./terms-and-conditions">Terms & Conditions</a>
                     </p>
                 </div>
 
