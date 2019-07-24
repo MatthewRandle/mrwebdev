@@ -117,7 +117,7 @@
         
         <section id="contact" class="contact">
             <h2 data-aos="fade-up" data-aos-duration="750">Get in touch</h2>
-            <form action="sendMessage.php" method="get" data-aos="fade-up" data-aos-duration="750" id="form" name="form">
+            <form action="sendMessage.php" method="POST" data-aos="fade-up" data-aos-duration="750" id="form" name="form">
                 <div class="form_group">
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" required>
@@ -140,7 +140,7 @@
                 </div>
 
                 <button type="submit" name="submit">
-                    <p>SEND MESSAGE</p>
+                    <!-- <p>SEND MESSAGE</p> -->
                 </button>
 
                 <?php
