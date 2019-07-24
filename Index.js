@@ -53,3 +53,9 @@ function removeHide() {
     navbar.classList.remove("hide");
     footer.classList.remove("hide");
 }
+
+const form = document.getElementsByTagName("form")[0];
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+})
