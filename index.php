@@ -1,5 +1,5 @@
 <?php
-    ini_set("session.save_path", "/var/www/html/sessionData");
+    ini_set("session.save_path", "/var/lib/php/sessions");
     session_start();
 ?>
 
