@@ -1133,4 +1133,18 @@ body {
 .form_consent a {
   color: #ee4540;
 }
+
+.contact_error {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Roboto Slab";
+  color: #ee4540;
+  line-height: 1.3em;
+  font-size: 0.7rem;
+}
+
+.contact_error span {
+  color: #1b1b1b;
+}
 /*# sourceMappingURL=Index.css.map */

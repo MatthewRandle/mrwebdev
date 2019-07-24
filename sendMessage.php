@@ -35,13 +35,13 @@
                 }
                 else {
                     $_SESSION["contactError"] = true;
-                    header("Location: index.php");
+                    header("Location: index.php#form");
                     die();
                 }
             }
             catch(Exception $e) {
                 $_SESSION["contactError"] = true;
-                header("Location: index.php");
+                header("Location: index.php#form");
                 die();
             }
         ?>
