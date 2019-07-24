@@ -22,7 +22,7 @@
         $response = $sendgrid->send($mail);
         echo $response;
         if($response == 202) {
-            header("Location: https://misterweb.dev")
+            header("Location: https://misterweb.dev");
         }
     }
     catch(Exception $e) {
