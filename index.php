@@ -1,6 +1,9 @@
 <?php
     ini_set("session.save_path", "/var/lib/php/sessions");
     session_start();
+    header('X-Content-Type-Options: nosniff');
+    header('X-Frame-Options: DENY');
+    header("X-XSS-Protection: 1; mode=block");
 ?>
 
 <!DOCTYPE html>
