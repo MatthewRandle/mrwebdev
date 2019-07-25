@@ -16,10 +16,10 @@
             $message = $_POST["message"] ?? "No Message";
             $subject = "New message from $name, $email";
             $to="contact@misterweb.dev";
-            $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: enquiry@misterweb.dev";
+            $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: contact@misterweb.dev";
 
             $mail = new \SendGrid\Mail\Mail();
-            $mail->setFrom("enquiry@misterweb.dev", "New Enquiry");
+            $mail->setFrom("contact@misterweb.dev", "New contact");
             $mail->setSubject($subject);
             $mail->addTo($to);
             $mail->addContent("text/plain", $message);
