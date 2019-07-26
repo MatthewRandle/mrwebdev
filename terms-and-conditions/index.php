@@ -181,7 +181,7 @@
                 </div>
             </div>
         
-            <a href="https://www.facebook.com/webdev.mr" rel="noopener noreferrer" target="_blank"><img
+            <a href="https://www.facebook.com/mrwebdevdesign" rel="noopener noreferrer" target="_blank"><img
                     src="../assets/facebook.png" alt="Facebook Logo"></a>
         </footer>
     </body>

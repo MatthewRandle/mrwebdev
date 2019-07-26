@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <a href="https://www.facebook.com/webdev.mr" rel="noopener noreferrer" target="_blank"><img src="./assets/facebook.png" alt="Facebook Logo"></a>
+            <a href="https://www.facebook.com/mrwebdevdesign" rel="noopener noreferrer" target="_blank"><img src="./assets/facebook.png" alt="Facebook Logo"></a>
         </footer>
 
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
