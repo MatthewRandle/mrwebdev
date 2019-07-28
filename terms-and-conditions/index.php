@@ -12,8 +12,8 @@
         <link rel="stylesheet" type="text/css" href="../css/Footer.css" />
         <link rel="stylesheet" type="text/css" href="../css/Legal.css" />
         <link rel="canonical" href="https://misterweb.dev/terms-and-conditions/" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
         <title>Terms & Conditions - MR Web Design & Development</title>
         <meta name="description" content="The terms and conditions for misterweb.dev. This page outlines the terms you agree too when using this site and what rules you should follow." />

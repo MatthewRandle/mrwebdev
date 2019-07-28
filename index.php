@@ -15,8 +15,8 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="canonical" href="https://misterweb.dev" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
         <title>MR Web Design & Development</title>
         <meta name="description" content="Web design and development, from basic static sites to single page applications, each beautiful, modern and fully custom built" />

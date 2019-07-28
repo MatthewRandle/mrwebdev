@@ -12,8 +12,8 @@
         <link rel="stylesheet" type="text/css" href="../css/Footer.css" />
         <link rel="stylesheet" type="text/css" href="../css/Legal.css" />
         <link rel="canonical" href="https://misterweb.dev/privacy-policy/" />
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
         <title>Privacy Policy - MR Web Design & Development</title>
         <meta name="description" content="The privacy policy for misterweb.dev. This page outlines what information we may collect and how you use our site." />
