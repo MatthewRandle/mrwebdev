@@ -36,7 +36,7 @@
                 <img src="./assets/ampersand.svg" alt="Ampersand">
                 <h3>Web Design</h3>
                 <h3>Development</h3>
-                <p>Creating professional, modern and beautiful websites at an affordable price.</p>
+                <p>Creating professional, modern and elegant websites at an affordable price.</p>
             </div>
         
             <div class="hero_right">
