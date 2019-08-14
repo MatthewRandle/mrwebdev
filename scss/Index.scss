@@ -583,6 +583,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     box-shadow: 0 4px 8px rgba(154,160,185,.05), 0 12px 32px rgba(166,173,201,.2);
+
+    @include phone-down() {
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+    }
 }
 
 .portfolio img {
@@ -595,6 +600,10 @@ body {
 
     @include tablet-down() {
         width: 30vw;
+    }
+
+    @include phone-down() {
+        width: 100%;
     }
 }
 

@@ -849,6 +849,14 @@ body {
           box-shadow: 0 4px 8px rgba(154, 160, 185, 0.05), 0 12px 32px rgba(166, 173, 201, 0.2);
 }
 
+@media only screen and (max-width: 480px) {
+  .portfolio {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+  }
+}
+
 .portfolio img {
   width: 350px;
   cursor: pointer;
@@ -863,6 +871,12 @@ body {
 @media only screen and (max-width: 768px) {
   .portfolio img {
     width: 30vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .portfolio img {
+    width: 100%;
   }
 }
 
