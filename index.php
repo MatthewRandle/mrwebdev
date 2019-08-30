@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/Global.css?v=1" />
+        <link rel="stylesheet" type="text/css" href="./css/Global.css?v=2" />
         <link rel="stylesheet" type="text/css" href="./css/Index.css?v=1" />
         <link rel="stylesheet" type="text/css" href="./css/Navbar.css?v=1" />
         <link rel="stylesheet" type="text/css" href="./css/Footer.css?v=1" />
