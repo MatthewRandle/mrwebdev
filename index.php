@@ -8,10 +8,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/Global.css" />
+        <link rel="stylesheet" type="text/css" href="./css/Global.css?v=1" />
         <link rel="stylesheet" type="text/css" href="./css/Index.css?v=1" />
-        <link rel="stylesheet" type="text/css" href="./css/Navbar.css" />
-        <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
+        <link rel="stylesheet" type="text/css" href="./css/Navbar.css?v=1" />
+        <link rel="stylesheet" type="text/css" href="./css/Footer.css?v=1" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="canonical" href="https://misterweb.dev" />
