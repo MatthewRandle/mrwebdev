@@ -9,7 +9,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="./css/Global.css" />
-        <link rel="stylesheet" type="text/css" href="./css/Index.css" />
+        <link rel="stylesheet" type="text/css" href="./css/Index.css?v=1" />
         <link rel="stylesheet" type="text/css" href="./css/Navbar.css" />
         <link rel="stylesheet" type="text/css" href="./css/Footer.css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400&display=swap" rel="stylesheet">
