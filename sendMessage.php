@@ -15,11 +15,11 @@
             $email = $_POST["email"] ?? "No Email";
             $message = $_POST["message"] ?? "No Message";
             $subject = "New message from $name, $email";
-            $to="contact@misterweb.dev";
-            $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: contact@misterweb.dev";
+            $to="contact@commenze.com";
+            $headers="MIME_VERSION: 1.0 \r\n Content-type:text/html;charset=UTF-8 \r\n From: contact@commenze.com";
 
             $mail = new \SendGrid\Mail\Mail();
-            $mail->setFrom("contact@misterweb.dev", "New contact");
+            $mail->setFrom("contact@commenze.com", "New contact");
             $mail->setSubject($subject);
             $mail->addTo($to);
             $mail->addContent("text/plain", $message);
