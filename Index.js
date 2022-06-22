@@ -56,14 +56,14 @@ function removeHide() {
 
 document.getElementsByTagName("form")[0].addEventListener("submit", submitForm)
 
-function submitForm(e) {
+async function submitForm(e) {
     e.preventDefault();
 
     const text = document.getElementById("message").value;
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
 
-    fetch("https://i5fr14z3pk.execute-api.us-east-1.amazonaws.com/prod", {
+    await fetch("https://i5fr14z3pk.execute-api.us-east-1.amazonaws.com/prod", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -72,4 +72,10 @@ function submitForm(e) {
             email
         })
     });
+
+    const contactSection = document.getElementById("contact");
+    const successSection = document.getElementById("contact-success");
+
+    contactSection.style.display = "none";
+    successSection.style.display = "flex";
 }
